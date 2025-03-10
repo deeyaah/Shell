@@ -1,0 +1,14 @@
+echo "Enter 3 numbers:"
+read a b c
+
+max=$a
+
+if [ $b -gt $max ]; then
+  max=$b
+fi
+
+if [ $c -gt $max ]; then
+  max=$c
+fi
+
+echo "Greatest number is $max"
