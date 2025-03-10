@@ -1,0 +1,24 @@
+echo "First num"
+read a
+
+echo "Second num"
+read b
+
+echo "Third num"
+read c
+
+# Calculate mean
+m=$(( (a + b + c) / 3 ))
+
+# Deviations from mean
+p=$(( a - m ))
+q=$(( b - m ))
+r=$(( c - m ))
+
+# Standard deviation calculation
+d=$(( (p * p + q * q + r * r) / 3 ))
+w=$(echo "sqrt($d)" | bc)
+
+# Output
+echo "Mean is $m"
+echo "Std dev $w"
