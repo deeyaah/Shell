@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Enter your Basic Salary: "
+read sal
+
+da=$(expr $sal \* 40 / 100)
+ha=$(expr $sal \* 20 / 100)
+Nsal=$(expr $sal + $da + $ha)
+
+echo "Your Basic Salary       : Rs. $sal"
+echo "Dearness Allowance (40%): Rs. $da"
+echo "House Rent Allowance(20%): Rs. $ha"
+echo "-------------------------------"
+echo "Gross Salary             : Rs. $Nsal"
