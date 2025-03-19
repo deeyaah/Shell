@@ -1,23 +1,22 @@
-echo "enter a number"
-read number
-n=2
-while [ $n -le $number ]
+echo "Enter a number:"
+read n
+
+for ((i=2; i<=n; i++))
 do
-i=2
-f=0
-while [ $i -lt $n ]
-do
-if [ `expr $n % $i` -eq 0 ]
-then
-f=1
-break;
-fi
-i=`expr $i + 1`
-done 
-if [ $f -eq 0 ]
-then
-echo $n 
-fi
-n=`expr $n + 1`
+    f=0
+    for ((j=2; j<i; j++))
+    do
+        if (( i % j == 0 ))
+        then
+            f=1
+            break
+        fi
+    done
+    if (( f == 0 ))
+    then
+        echo -n "$i "
+    fi
 done
+
+
 
