@@ -1,17 +1,16 @@
-echo "Enter the limit"
-read l
+echo "Enter a limit"
+read num
 
-a=0
-b=1
+a=1
+b=0
+c=0
+n=1
 
-echo "Fibonacci series up to $l :"
-echo $a
-echo $b
-
-while [ $((a + b)) -le $l ]
+while [ $n -le $num ]
 do
-    c=$((a + b))
     echo $c
+    c=$((a + b))
     a=$b
     b=$c
+    n=$((n + 1))
 done
